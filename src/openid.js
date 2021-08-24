@@ -25,7 +25,10 @@ const getUserInfo = accessToken =>
           updated_at: NumericDate(
             // OpenID requires the seconds since epoch in UTC
             new Date(Date.parse(userDetails.updated_at))
-          )
+          ),
+
+          // Custom attribute
+          gitHubAccessToken: accessToken,
         };
         logger.debug('Resolved claims: %j', claims, {});
         return claims;
