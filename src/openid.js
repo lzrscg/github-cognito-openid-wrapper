@@ -28,7 +28,7 @@ const getUserInfo = accessToken =>
           ),
 
           // Custom attribute
-          gitHubAccessToken: accessToken,
+          github_access_token: accessToken,
         };
         logger.debug('Resolved claims: %j', claims, {});
         return claims;
